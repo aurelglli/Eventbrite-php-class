@@ -23,8 +23,7 @@ class eventbrite
             case "authorized":
 
                 $getTokens = self::getTokens();
-                print_r($getTokens);
-                print_r(self::listEvents($getTokens->access_token));
+		print_r('$getTokens');
                 break;
             default:
                 header("Location: " . self::getAuthorizeLink());
@@ -63,7 +62,6 @@ class eventbrite
       {
 	    
         $c = curl_init($url);
-        //curl_setopt($c, CURLOPT_HTTPHEADER, $o);
         curl_setopt($c, CURLOPT_VERBOSE, 0);
         curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
         if ($postfields)
