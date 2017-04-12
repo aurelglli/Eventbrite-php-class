@@ -47,17 +47,6 @@ class eventbrite
         
         return self::call('https://www.eventbrite.com/oauth/token', $o, $postfields);
       }
-    public function refreshTokens($refresh_token)
-      {
-        $o          = array(
-            'Authorization: Basic ' . base64_encode(self::KEY_ID . ':' . self::KEY_SECRET)
-        );
-        $postfields = array(
-            'refresh_token' => $refresh_token,
-            'grant_type' => 'refresh_token'
-        );
-        return self::call('https://api.hubic.com/oauth/token/', $o, $postfields);
-      }
     public function call($url, $o, $postfields)
       {
 	    
