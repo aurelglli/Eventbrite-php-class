@@ -14,8 +14,8 @@
 class eventbrite
   {
     const ACCOUNT_PASSWORD = '';
-    const KEY_ID = 'XXXXXXXXXX';
-    const KEY_SECRET = 'XXXXXXXXXX';
+    const KEY_ID = '';
+    const KEY_SECRET = '';
     function __construct()
       {
         switch ($_GET[state])
