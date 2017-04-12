@@ -81,13 +81,6 @@ class eventbrite
         );
         return self::call('https://www.eventbriteapi.com/v3/users/me/?token='.$access_token, $o);
       }
-       public function listEvents($access_token)
-      {
-        $o = array(
-            'Authorization: Bearer ' . $access_token
-        );
-        return self::call('https://www.eventbriteapi.com/v3/events/search/?token='.$access_token, $o);
-      }
 
   }
 new eventbrite();
